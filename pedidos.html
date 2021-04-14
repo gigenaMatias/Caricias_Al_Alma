@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caricias Al Alma Pedidos</title>
+    <link rel="icon" type="imagenes" href="favicon.ico"/>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body onload="Captcha(), genera_tabla(), cargar()">
+    <img id="logo" src="css/imagenes/logo.png">
+    <header> <!--menu de navegacion-->
+        <div class="menu_bar" id="menu_bar">
+            <button id="btn_menu"><i class="fa fa-bars"></i></button>
+            <h1>Caricias al Alma</h1>
+        </div>
+        <nav id="nav">
+            <ul class="navigation">
+                <li class="itemMenu"><a href="index.html">HOME</a></li>
+                <li class="itemMenu"><a href="productos.html">PRODUCTOS</a></li>
+                <li class="itemMenu"><a href="pedidos.html" target="_parent">PEDIDOS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="promo">
+        <p>Promo dia de la madre!!!!! con su compra se lleva una taza de regalo!, a demas aprovecha nuestra promo de 3 pan dulces por $1050 (uno de cada variedad)</p>
+    </div>
+    <form>
+        <div class="nombres">
+            <input id ="nombreCliente" type="text" placeholder = "Nombre" onfocus="this.value=''">
+            <input id ="apellidoCliente" type="text" placeholder = "Apellido" onfocus="this.value=''">
+        </div>
+        <div class="telefonos">
+            <input id ="telCliente" type="text" placeholder = "Teléfono" onfocus="this.value=''">
+            <input id ="telAltCliente" type="text" placeholder = "Teléfono alternativo" onfocus="this.value=''">
+        </div>
+        <div class="productoycant">
+            <select id="listaProductos"> <!--selection cargada por arreglo-->
+            </select>
+            <input id = "cantidad" type="text" placeholder="Cantidad" onfocus="this.value=''">
+        </div>
+        <button id="BotonAgregar" type="button" onclick="validarEspacio()">Agregar al carro</button>
+        <button id="BotonAgregar" type="button" onclick="agregarPromo()">Agregar Promo!</button>
+        <br>
+        <table id="tablaprueba">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpoTabla">
+            </tbody>
+        </table>
+
+        <div class="preciofinal">
+            <p>Total:</p>
+            <p id="total">0</p>
+        </div>
+
+        <button id="BotonAgregar" type="button" onclick="vaciarCarrito()">Vaciar Carrito</button>
+
+        <br>
+        <p id="mainCaptcha"></p>
+        <button id ="BotonRefrescarCaptcha" type="button" onclick="Captcha()"><i class="fa fa-retweet"></i></button>
+        <input type="text" id="txtInput" placeholder="Ingrese el captcha" onfocus ="this.value=''"/>
+        <button id ="BotonRealizarPedido" type="button" onclick ="ValidCaptcha();">Realizar pedido</button>
+        <br>
+        
+    </form>
+    <script src="js/js.js"></script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+
+*{ /*Mobile*/
+    margin:0;
+    padding:0;
+}
+
+.nombres, .telefonos, .productoycant{ /*divs dentro del formulario*/
+  display: grid;
+}
+
+.preciofinal{ /*otro div del formulario*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+form, #promo{
+  background: rgb(255, 140, 0, 0.8);
+  display: grid;
+  justify-content: center;
+  width: 250px;
+  margin: 20px auto 20px auto;
+  padding: 20px;
+  border: solid white;
+}
+
+form > p{ 
+  margin: 5px auto 5px auto;
+  width: 150px;
+  text-align: center;
+}
+
+input, select { /*txt del form (pedidos)*/
+  margin: 5px auto 5px auto;
+  width: 150px;
+  text-align: center;
+}
+
+form > ul{ /*lista de productos del carrito (pedidos)*/
+  list-style: none;
+  text-align: center;
+  color: white;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+
+#BotonRealizarPedido,#BotonAgregar{ /*algunos botones de pedidos*/
+  width: 150px;
+  margin: 5px auto 5px auto;
+  background-color: #df7c03;
+  color: rgb(255, 255, 255);
+  padding: 14px 20px;
+  border: solid 1px white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgb(75, 41, 10);
+}
+
+#BotonRefrescarCaptcha{ /*boton de refresh pedidos*/
+  width: 40px;
+  margin: 0 auto 5px auto;
+  color:white;
+  background-color: #df7c03;
+  border: solid 1px white;border-radius: 5px;
+  box-shadow: 2px 2px 5px rgb(75, 41, 10);
+}
+
+#BotonAgregar, #BotonRefrescarCaptcha, #BotonRealizarPedido:hover{ /*botones de pedidos*/
+  cursor: pointer;
+}
+
+#mainCaptcha{ /*captcha (pedidos)*/
+  width: auto;
+  border-style: solid;
+  border-color: white;
+  background-color: rgb(78, 42, 0 );
+  margin: auto;
+  color: white;
+  padding: 5px;
+  font-size: 80%;
+}
+
+body{
+    background-image: url(https://cdn.discordapp.com/attachments/745775815823720468/766433230672494632/fondoPagina.jpg);
+}
+
+header{
+    width: 100%;
+}
+
+.informacioncontacto{ /*informacion de contacto (index)*/
+    margin-left: 20px;
+    margin-right: 20px;
+    list-style: none;
+    color: white;
+    text-align: right;
+}
+
+.informacioncontacto a{ /*links de informacion de contacto (index)*/
+    color: white;
+}
+
+.informacioncontacto img{ /*imagenes de informacion de contacto (index)*/
+    height: 25px;
+    width: 25px;
+}
+
+#infoContacto{ /*lista de informacion de contacto (index)*/
+    font-family: 'Dancing Script',cursive;
+    font-size:  140%;
+}
+
+header nav { /*navegador (menu)*/
+    width: 70%;
+    height:100%;
+    margin:0;
+    position:fixed;
+    z-index: +2;
+    display: none;
+}
+
+header nav ul li{ /*items del menu*/
+    display: block;
+    float: none;
+    border-bottom:1px solid white;
+}
+
+.menu_bar { /*barra del menu mobil*/
+    display: block;
+    width: 100%;
+    background: #be6d09;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu_bar h1{ /*titulo del menu mobil*/
+    margin-right: 20px;
+    font-family: 'Dancing Script',cursive;
+    color: white;
+}
+
+.menu_bar #btn_menu{ /*hamburguesa*/
+    display: block;
+    padding: 10px;
+    background:#FF8C00;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+header nav ul li a{ /*estilos de los links del menu*/
+    color:white;
+    padding:20px;
+    display: block;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: bold;
+    background: #FF8C00;
+}
+
+header nav ul li a:hover{ /*cambia de color las opciones del menu*/
+    background: #be6d09;
+}
+
+#logo{ /*Logo del header*/
+    display: none;
+}
+
+.imgArticle, .imgSidebar{  /*imagenes del index*/
+    margin: 10px auto 10px auto;
+    border: solid white;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+}
+
+article, sidebar{
+    background-color: #FF8C00;
+    display: grid;
+    border: solid white;
+    margin: 20px;
+}
+
+h2,h3,p{
+    color: white;
+    font-family: sans-serif;
+    margin: 5px;
+}
+
+article > h1{
+    font-size: 200%;
+    text-align: center;
+    color:white;
+    margin: 5px;
+    font-family: 'Dancing Script',cursive;
+}
+
+article >p{
+    font-size: 110%;
+}
+
+#divcarusel{              /*propiedades del div que contiene el carusel*/
+  width: 80%;
+  margin: auto;
+}
+
+#tituloDeitemCarusel, #precioDeItemCarusel {
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+table{ /*tabla*/                                                        /*propiedades de la tabla*/
+    margin: auto;
+    width: auto;
+    background-color:  #e9ae56;
+  }
+  
+  thead{ /*celdas título*/
+    text-align: center;
+    height: 25px;
+    background-color: orange;
+    color: white
+  }
+  
+  td,tr{ /*filas y celdas del cuerpo*/
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: bottom;
+    padding: 5px;
+  }
+
+  table,td,tr,th{ /*bordes de toda la tabla*/
+    border: solid white;
+    border-collapse: collapse;
+  }
+  
+
+@media screen and (min-width: 600px){ /*Desktop*/
+  .nombres, .telefonos, .productoycant{
+    display: flex;
+    flex-direction: row;
+  }
+
+  #cantidad{
+    width: 70px;
+  }
+
+  form, #promo{
+    width: 55%;
+  }
+
+    section{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        justify-content: space-between;
+    }
+
+    #logo{
+        display: grid;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 175px;
+        height: 175px;
+    }
+    header{
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        position:static;
+    }
+
+    header nav {
+        position: static;
+        display: grid;
+        width: auto;
+        max-width: 1000px ;
+        margin: 20px auto;
+        background: #FF8C00;
+        height: auto;
+    }
+    
+    header nav ul{
+        overflow: hidden;
+        list-style: none;
+    }
+    
+    header nav ul li{
+        float: left;
+        display: grid;
+        border-bottom: none;
+    }
+
+    .menu_bar {
+        display: none;
+    }
+
+    .informacioncontacto{
+        margin-bottom: 20px;
+    }
+
+    h2,h3,p{
+        margin: 5px 20px 5px 20px ;
+    }
+
+    #divcarusel{              /*propiedades del div que contiene el carusel*/
+      width: 30%;
+      margin: auto;
+    }
+  
+}
